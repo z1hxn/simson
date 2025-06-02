@@ -1,0 +1,1617 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html, body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+  </head>
+  <body style="margin:0;padding:0;width:100%;min-height:100vh;font-family:Pretendard,sans-serif;background-color:#f7f7fb;overflow-x:hidden;">
+    <div class="w-full max-w-screen-2xl mx-auto h-[1080px] relative bg-[#f7f7fb]">
+      <div
+        class="w-full max-w-screen-2xl mx-auto h-20 absolute left-0 top-[-1px] border-t-0 border-r-0 border-b border-l-0 border-[#e5e5ec]"
+      >
+        <div
+          class="w-[260px] h-10 absolute left-[289px] top-5 overflow-hidden rounded-xl bg-[#ebebf1]"
+        >
+          <div class="flex justify-start items-center absolute left-4 top-2.5 gap-1.5">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M8.74992 14.1667C11.7415 14.1667 14.1666 11.7416 14.1666 8.75004C14.1666 5.7585 11.7415 3.33337 8.74992 3.33337C5.75838 3.33337 3.33325 5.7585 3.33325 8.75004C3.33325 11.7416 5.75838 14.1667 8.74992 14.1667Z"
+                stroke="#767676"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+              ></path>
+              <path
+                d="M16.1363 17.197C16.4292 17.4899 16.9041 17.4899 17.197 17.197C17.4899 16.9041 17.4899 16.4292 17.197 16.1363L16.1363 17.197ZM12.5 12.5L11.9697 13.0303L16.1363 17.197L16.6667 16.6667L17.197 16.1363L13.0303 11.9697L12.5 12.5Z"
+                fill="#767676"
+              ></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#767676]">
+              Search...
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-start items-center absolute left-[648px] top-[29px] gap-12">
+          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-3.5">
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              미완료 과제
+            </p>
+            <div
+              class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-2 py-0.5 rounded-[100px] bg-[#ebd9e4]"
+            >
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-4 text-[13px] font-medium text-left text-[#960139]"
+              >
+                02
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-3.5">
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              신규 메시지
+            </p>
+            <div
+              class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-2 py-0.5 rounded-[100px] bg-[#ebd9e4]"
+            >
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-4 text-[13px] font-medium text-left text-[#960139]"
+              >
+                03
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-3.5">
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              신규 포인트
+            </p>
+            <div
+              class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-2 py-0.5 rounded-[100px] bg-[#ebd9e4]"
+            >
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-4 text-[13px] font-medium text-left text-[#960139]"
+              >
+                02
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-3.5">
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              신규 서혁준
+            </p>
+            <div
+              class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-2 py-0.5 rounded-[100px] bg-[#ebd9e4]"
+            >
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-6 text-[13px] font-medium text-left text-[#960139]"
+              >
+                523
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-start items-center absolute left-7 top-5 gap-2">
+          <img
+            src="{% static '심슨어학원-로고-1.png' %}"
+            class="flex-grow-0 flex-shrink-0 w-10 h-10 object-cover"
+          />
+          <div class="flex-grow-0 flex-shrink-0 w-[156px] h-[37px]">
+            <p class="absolute left-12 top-[17.5px] text-lg font-semibold text-left text-black">
+              심슨어학원 학생시스템
+            </p>
+            <p class="absolute left-12 top-[1.5px] text-xs text-left text-[#767676]">
+              Work Hard, No Short Cut!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-end items-center absolute left-[1633px] top-[23px] gap-6">
+        <div class="flex justify-end items-center flex-grow-0 flex-shrink-0 relative gap-4">
+          <svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M4 12.5L12 16.5L20 12.5"
+              stroke="#111111"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M4 16.5L12 20.5L20 16.5"
+              stroke="#111111"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M12 4.5L4 8.5L12 12.5L20 8.5L12 4.5Z"
+              stroke="#111111"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path></svg
+          ><svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <g clip-path="url(#clip0_289_475)">
+              <path
+                d="M19.5002 12.5C19.5002 12.27 19.4902 12.05 19.4702 11.82L21.3302 10.41C21.7302 10.11 21.8402 9.55 21.5902 9.11L19.7202 5.88C19.4702 5.44 18.9302 5.26 18.4702 5.46L16.3202 6.37C15.9502 6.11 15.5602 5.88 15.1502 5.69L14.8602 3.38C14.8002 2.88 14.3702 2.5 13.8702 2.5H10.1402C9.63015 2.5 9.20015 2.88 9.14015 3.38L8.85015 5.69C8.44015 5.88 8.05015 6.11 7.68015 6.37L5.53015 5.46C5.07015 5.26 4.53015 5.44 4.28015 5.88L2.41015 9.12C2.16015 9.56 2.27015 10.11 2.67015 10.42L4.53015 11.83C4.51015 12.05 4.50015 12.27 4.50015 12.5C4.50015 12.73 4.51015 12.95 4.53015 13.18L2.67015 14.59C2.27015 14.89 2.16015 15.45 2.41015 15.89L4.28015 19.12C4.53015 19.56 5.07015 19.74 5.53015 19.54L7.68015 18.63C8.05015 18.89 8.44015 19.12 8.85015 19.31L9.14015 21.62C9.20015 22.12 9.63015 22.5 10.1302 22.5H13.8602C14.3602 22.5 14.7902 22.12 14.8502 21.62L15.1402 19.31C15.5502 19.12 15.9402 18.89 16.3102 18.63L18.4602 19.54C18.9202 19.74 19.4602 19.56 19.7102 19.12L21.5802 15.89C21.8302 15.45 21.7202 14.9 21.3202 14.59L19.4602 13.18C19.4902 12.95 19.5002 12.73 19.5002 12.5ZM12.0402 16C10.1102 16 8.54015 14.43 8.54015 12.5C8.54015 10.57 10.1102 9 12.0402 9C13.9702 9 15.5402 10.57 15.5402 12.5C15.5402 14.43 13.9702 16 12.0402 16Z"
+                fill="black"
+              ></path>
+            </g>
+            <defs>
+              <clipPath id="clip0_289_475">
+                <rect width="24" height="24" fill="white" transform="translate(0 0.5)"></rect>
+              </clipPath>
+            </defs></svg
+          ><svg
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M10 20.5H14"
+              stroke="#111111"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            ></path>
+            <path
+              d="M12 5.5V4.5"
+              stroke="#111111"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            ></path>
+            <path
+              d="M19 17.5H5L7 15.5V10.5C7 7.602 9 5.5 12 5.5C15 5.5 17 7.602 17 10.5V15.5L19 17.5Z"
+              stroke="#111111"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M16.5 11.5C18.433 11.5 20 9.933 20 8C20 6.067 18.433 4.5 16.5 4.5C14.567 4.5 13 6.067 13 8C13 9.933 14.567 11.5 16.5 11.5Z"
+              fill="#ED1C24"
+              stroke="#F7F7FB"
+              stroke-width="1.5"
+            ></path>
+          </svg>
+        </div>
+        <div class="flex justify-end items-center flex-grow-0 flex-shrink-0 relative gap-2.5">
+          <svg
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="flex-grow-0 flex-shrink-0 w-[33px] h-[33px]"
+            preserveAspectRatio="none"
+          >
+            <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+            <circle cx="27" cy="27" r="5.5" fill="#0C8800" stroke="#F1F1F5"></circle>
+          </svg>
+          <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1.5">
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              김지한
+            </p>
+            <div class="flex-grow-0 flex-shrink-0 w-[37px] h-[17px]">
+              <div class="w-[37px] h-[17px]">
+                <div class="w-[37px] h-[17px]">
+                  <div class="w-[37px] h-[17px]">
+                    <div class="w-[37px] h-[17px]">
+                      <div
+                        class="w-[37px] h-[17px] absolute left-[46.5px] top-0.5 rounded-[5px] bg-[#ebd9e4]"
+                      ></div>
+                      <p
+                        class="absolute left-[52px] top-[6.5px] text-[8px] font-medium text-center text-[#98183b]"
+                      >
+                        폴라 AM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col justify-start items-start w-[260px] h-[1000px] absolute left-0 top-20 py-4 border-t-0 border-r border-b-0 border-l-0 border-[#e5e5ec]"
+      >
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div
+            class="w-[200px] h-14 absolute left-5 top-0 overflow-hidden rounded-xl bg-[#ebd9e4]"
+          ></div>
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M3.79638 7.28108L9.46304 3.67502C9.79061 3.46657 10.2092 3.46657 10.5368 3.67502L16.2035 7.28108C16.4919 7.46464 16.6666 7.78284 16.6666 8.12474V15.6667C16.6666 16.219 16.2189 16.6667 15.6666 16.6667H4.33325C3.78097 16.6667 3.33325 16.219 3.33325 15.6667V8.12474C3.33325 7.78284 3.50793 7.46464 3.79638 7.28108Z"
+                fill="#960139"
+                stroke="#960139"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M8.33325 11.6666H11.6666"
+                stroke="#EBE9FB"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-semibold text-left text-[#960139]">
+              홈
+            </p>
+          </div>
+        </div>
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M15.6666 6.66663H4.33325C3.78097 6.66663 3.33325 7.11434 3.33325 7.66663V15.6666C3.33325 16.2189 3.78097 16.6666 4.33325 16.6666H15.6666C16.2189 16.6666 16.6666 16.2189 16.6666 15.6666V7.66663C16.6666 7.11434 16.2189 6.66663 15.6666 6.66663Z"
+                fill="#999999"
+                stroke="#999999"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M9.44444 6.66671C9.75127 6.66671 10 6.41798 10 6.11115V6.11115C10 5.93629 9.91767 5.77163 9.77778 5.66671L7.41202 3.89239C6.95522 3.54979 6.34405 3.49468 5.83333 3.75004V3.75004C5.32261 4.0054 5 4.53613 5 5.10714V5.10714C5 5.96046 5.69176 6.66671 6.54508 6.66671H9.44444Z"
+                stroke="#999999"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M10.5556 6.66671C10.2487 6.66671 10 6.41798 10 6.11115V6.11115C10 5.93629 10.0823 5.77163 10.2222 5.66671L12.588 3.89239C13.0448 3.54979 13.6559 3.49468 14.1667 3.75004V3.75004C14.6774 4.0054 15 4.53613 15 5.10714V5.10714C15 5.96046 14.3082 6.66671 13.4549 6.66671H10.5556Z"
+                stroke="#999999"
+                stroke-width="1.5"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M10 10V14"
+                stroke="#F7F7FB"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M12 12L8 12"
+                stroke="#F7F7FB"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              공지
+            </p>
+          </div>
+        </div>
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <g clip-path="url(#clip0_262_388)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.5811 9.79158C13.2293 7.90162 11.6212 6.51941 9.59645 6.89509C7.57168 7.27077 6.26248 9.09753 6.5362 11.0825C6.75612 12.6772 7.97002 16.4189 8.43875 17.8283C8.50272 18.0206 8.5347 18.1168 8.59802 18.1838C8.65318 18.2422 8.72653 18.2846 8.8047 18.3032C8.89443 18.3245 8.9937 18.3041 9.19225 18.2633C10.6472 17.9646 14.4945 17.145 15.9856 16.5381C17.8414 15.7826 18.7992 13.7367 18.0818 11.7941C17.3644 9.85151 15.3937 9.15122 13.5811 9.79158Z"
+                  fill="#999999"
+                ></path>
+                <path
+                  d="M12.9547 8.27115C13.2663 7.71749 13.5261 7.21789 13.6864 6.83764C14.4645 4.99118 13.6951 2.86727 11.8142 2.0009C9.9333 1.13452 8.04459 2.03287 7.21567 3.7674C5.63055 2.67971 3.51606 2.83945 2.34999 4.53682C1.18391 6.23419 1.54988 8.45165 3.14699 9.66166C3.87183 10.2108 5.30538 11.0201 6.65504 11.7403M13.5811 9.79158C13.2293 7.90162 11.6212 6.51941 9.59645 6.89509C7.57168 7.27077 6.26248 9.09753 6.5362 11.0825C6.75612 12.6772 7.97002 16.4189 8.43875 17.8283C8.50272 18.0206 8.5347 18.1168 8.59802 18.1838C8.65318 18.2422 8.72653 18.2846 8.8047 18.3032C8.89443 18.3245 8.9937 18.3041 9.19225 18.2633C10.6472 17.9646 14.4945 17.145 15.9856 16.5381C17.8414 15.7826 18.7992 13.7367 18.0818 11.7941C17.3644 9.85151 15.3937 9.15122 13.5811 9.79158Z"
+                  stroke="#999999"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_262_388">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              클래스
+            </p>
+          </div>
+        </div>
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <g clip-path="url(#clip0_262_348)">
+                <path
+                  d="M7.50008 18.3333C10.7217 18.3333 13.3334 15.7216 13.3334 12.5C13.3334 9.2783 10.7217 6.66663 7.50008 6.66663C4.27842 6.66663 1.66675 9.2783 1.66675 12.5C1.66675 15.7216 4.27842 18.3333 7.50008 18.3333Z"
+                  fill="#999999"
+                ></path>
+                <path
+                  d="M13.2815 13.2814C16.1337 12.8996 18.3334 10.4566 18.3334 7.49996C18.3334 4.2783 15.7217 1.66663 12.5001 1.66663C9.5434 1.66663 7.10049 3.86635 6.71864 6.71852M13.3334 12.5C13.3334 15.7216 10.7217 18.3333 7.50008 18.3333C4.27842 18.3333 1.66675 15.7216 1.66675 12.5C1.66675 9.2783 4.27842 6.66663 7.50008 6.66663C10.7217 6.66663 13.3334 9.2783 13.3334 12.5Z"
+                  stroke="#999999"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_262_348">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              과제
+            </p>
+          </div>
+        </div>
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M9.68571 1.69519C8.95321 2.00769 4.5582 3.88352 3.82654 4.19602C3.51904 4.32686 3.33154 4.61686 3.33154 4.95103C3.33154 8.60102 3.47737 10.2343 4.13904 12.1152C5.00487 14.5777 6.70488 16.5402 9.58154 18.1844C9.83738 18.331 10.159 18.331 10.4149 18.1844C13.3174 16.5252 15.0249 14.5693 15.8832 12.1152C16.5366 10.2477 16.6649 8.69436 16.6649 4.95103C16.6649 4.61853 16.4757 4.32769 16.1699 4.19602L10.3632 1.69519C10.1532 1.60519 9.89571 1.60519 9.68571 1.69519Z"
+                fill="#999999"
+              ></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              성적
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 h-[109px] w-[260px] relative"
+        >
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-9 relative overflow-hidden">
+            <div class="flex justify-start items-center absolute left-[60px] top-[7px] gap-1">
+              <div class="flex-grow-0 flex-shrink-0 w-1 h-px bg-[#767676]"></div>
+              <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#767676]">
+                iBT 모의고사
+              </p>
+            </div>
+          </div>
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-9 relative overflow-hidden">
+            <div class="flex justify-start items-center absolute left-[60px] top-[7px] gap-1">
+              <div class="flex-grow-0 flex-shrink-0 w-1 h-px bg-[#767676]"></div>
+              <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#767676]">
+                학원 시험
+              </p>
+            </div>
+          </div>
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-9 relative overflow-hidden">
+            <div class="flex justify-start items-center absolute left-[60px] top-[7px] gap-1">
+              <div class="flex-grow-0 flex-shrink-0 w-1 h-px bg-[#767676]"></div>
+              <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#767676]">
+                온라인 과제
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M9.99821 1.62769C6.36321 1.62769 3.33154 2.92685 3.33154 4.96102C3.33154 6.99519 6.36321 8.29435 9.99821 8.29435C13.6332 8.29435 16.6649 6.99519 16.6649 4.96102C16.6649 2.92685 13.6332 1.62769 9.99821 1.62769ZM3.33154 7.98185V9.96102C3.33154 11.9952 6.36321 13.2944 9.99821 13.2944C13.6332 13.2944 16.6649 11.9952 16.6649 9.96102V7.98185C15.1532 9.22352 12.7965 9.96102 9.99821 9.96102C7.19988 9.96102 4.84321 9.22352 3.33154 7.98185ZM3.33154 12.9819V14.961C3.33154 16.9952 6.36321 18.2944 9.99821 18.2944C13.6332 18.2944 16.6649 16.9952 16.6649 14.961V12.9819C15.1532 14.2235 12.7965 14.961 9.99821 14.961C7.19988 14.961 4.84321 14.2235 3.33154 12.9819Z"
+                fill="#999999"
+              ></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              포인트
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[260px] relative"
+        >
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-9 relative overflow-hidden">
+            <div class="flex justify-start items-center absolute left-[60px] top-[7px] gap-1">
+              <div class="flex-grow-0 flex-shrink-0 w-1 h-px bg-[#767676]"></div>
+              <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#767676]">
+                나의 포인트
+              </p>
+            </div>
+          </div>
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-9 relative overflow-hidden">
+            <div class="flex justify-start items-center absolute left-[60px] top-[7px] gap-1">
+              <div class="flex-grow-0 flex-shrink-0 w-1 h-px bg-[#767676]"></div>
+              <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#767676]">
+                포인트 랭킹
+              </p>
+            </div>
+          </div>
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-9 relative overflow-hidden">
+            <div class="flex justify-start items-center absolute left-[60px] top-[7px] gap-1">
+              <div class="flex-grow-0 flex-shrink-0 w-1 h-px bg-[#767676]"></div>
+              <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#767676]">
+                쇼핑몰
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M14.5001 1.66663H5.50008C5.03337 1.66663 4.80002 1.66663 4.62176 1.75745C4.46495 1.83735 4.33747 1.96483 4.25758 2.12163C4.16675 2.29989 4.16675 2.53325 4.16675 2.99996V4.72872C4.16675 5.13637 4.16675 5.3402 4.2128 5.53201C4.25363 5.70207 4.32097 5.86465 4.41235 6.01377C4.51542 6.18196 4.65955 6.32609 4.9478 6.61434L7.39061 9.05715C7.72061 9.38716 7.88563 9.55217 7.94745 9.74244C8.00183 9.90981 8.00183 10.0901 7.94745 10.2575C7.88563 10.4477 7.72062 10.6128 7.39061 10.9428L4.9478 13.3856C4.65954 13.6738 4.51542 13.818 4.41235 13.9862C4.32097 14.1353 4.25363 14.2978 4.2128 14.4679C4.16675 14.6597 4.16675 14.8635 4.16675 15.2712V17C4.16675 17.4667 4.16675 17.7 4.25758 17.8783C4.33747 18.0351 4.46495 18.1626 4.62176 18.2425C4.80002 18.3333 5.03337 18.3333 5.50008 18.3333H14.5001C14.9668 18.3333 15.2001 18.3333 15.3784 18.2425C15.5352 18.1626 15.6627 18.0351 15.7426 17.8783C15.8334 17.7 15.8334 17.4667 15.8334 17V15.2712C15.8334 14.8635 15.8334 14.6597 15.7874 14.4679C15.7465 14.2978 15.6792 14.1353 15.5878 13.9862C15.4847 13.818 15.3406 13.6738 15.0524 13.3856L12.6096 10.9428C12.2795 10.6128 12.1145 10.4477 12.0527 10.2575C11.9983 10.0901 11.9983 9.90981 12.0527 9.74244C12.1145 9.55217 12.2795 9.38717 12.6096 9.05715L15.0524 6.61434C15.3406 6.32609 15.4847 6.18196 15.5878 6.01377C15.6792 5.86465 15.7465 5.70207 15.7874 5.53201C15.8334 5.3402 15.8334 5.13637 15.8334 4.72872V2.99996C15.8334 2.53325 15.8334 2.29989 15.7426 2.12163C15.6627 1.96483 15.5352 1.83735 15.3784 1.75745C15.2001 1.66663 14.9668 1.66663 14.5001 1.66663Z"
+                fill="#999999"
+                stroke="#999999"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M8 15.5H12"
+                stroke="#F7F7FB"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              포트폴리오
+            </p>
+          </div>
+        </div>
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M9.58662 1.7375L3.75329 5.07083C3.19329 5.39075 3.19329 6.20925 3.75329 6.52916C4.48245 6.94583 8.85745 9.44583 9.58662 9.8625C9.84245 10.0089 10.1633 10.0089 10.42 9.8625L16.2533 6.52916C16.8133 6.20925 16.8133 5.39075 16.2533 5.07083L10.42 1.7375C10.1641 1.59108 9.84328 1.59108 9.58662 1.7375ZM3.96162 9.15933C3.75579 9.2155 3.55495 9.35016 3.44079 9.55C3.21245 9.94958 3.35412 10.4675 3.75329 10.6958L9.58662 14.0292C9.84245 14.1756 10.1633 14.1756 10.42 14.0292L16.2533 10.6958C16.6533 10.4675 16.7941 9.94958 16.5658 9.55C16.3374 9.15041 15.8199 9.00916 15.4199 9.2375L10.0033 12.3365L4.58662 9.2375C4.38662 9.12333 4.16745 9.10325 3.96162 9.15933ZM3.96162 13.326C3.75579 13.3822 3.55495 13.5168 3.44079 13.7167C3.21245 14.1162 3.35412 14.6342 3.75329 14.8625L9.58662 18.1958C9.84245 18.3422 10.1633 18.3422 10.42 18.1958L16.2533 14.8625C16.6533 14.6342 16.7941 14.1162 16.5658 13.7167C16.3374 13.3171 15.8199 13.1758 15.4199 13.4042L10.0033 16.5032L4.58662 13.4042C4.38662 13.29 4.16745 13.2699 3.96162 13.326Z"
+                fill="#999999"
+              ></path>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              커뮤니티
+            </p>
+          </div>
+        </div>
+        <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+          <div class="flex justify-start items-center absolute left-8 top-[17px] gap-2">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="none"
+            >
+              <g clip-path="url(#clip0_262_363)">
+                <path d="M5.00008 4.99996L6.66675 3.33329L5.00008 1.66663" fill="#999999"></path>
+                <path d="M15.0001 15L13.3334 16.6666L15.0001 18.3333" fill="#999999"></path>
+                <path
+                  d="M6.66675 18.3333C9.42817 18.3333 11.6667 16.0947 11.6667 13.3333C11.6667 10.5719 9.42817 8.33329 6.66675 8.33329C3.90532 8.33329 1.66675 10.5719 1.66675 13.3333C1.66675 16.0947 3.90532 18.3333 6.66675 18.3333Z"
+                  fill="#999999"
+                ></path>
+                <path
+                  d="M5.00008 4.99996L6.66675 3.33329M6.66675 3.33329L5.00008 1.66663M6.66675 3.33329H5.00008C3.15913 3.33329 1.66675 4.82568 1.66675 6.66663M15.0001 15L13.3334 16.6666M13.3334 16.6666L15.0001 18.3333M13.3334 16.6666H15.0001C16.841 16.6666 18.3334 15.1742 18.3334 13.3333M11.1811 11.1809C11.8329 11.4923 12.5628 11.6666 13.3334 11.6666C16.0948 11.6666 18.3334 9.42805 18.3334 6.66663C18.3334 3.9052 16.0948 1.66663 13.3334 1.66663C10.572 1.66663 8.33342 3.9052 8.33342 6.66663C8.33342 7.43722 8.50774 8.1671 8.81911 8.81898M11.6667 13.3333C11.6667 16.0947 9.42817 18.3333 6.66675 18.3333C3.90532 18.3333 1.66675 16.0947 1.66675 13.3333C1.66675 10.5719 3.90532 8.33329 6.66675 8.33329C9.42817 8.33329 11.6667 10.5719 11.6667 13.3333Z"
+                  stroke="#999999"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_262_363">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#505050]">
+              메시지
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col justify-start items-start w-[360px] h-full gap-10 py-8 bg-[#f1f1f5] border-l border-[#e5e5ec] flex-shrink-0"
+      >
+        <div
+          class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-5"
+        >
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-7 relative">
+            <p class="absolute left-8 top-0 text-xl font-semibold text-left text-[#505050]">
+              학원 친구
+            </p>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[22px] h-[22px] absolute left-[306px] top-[3px]"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <path
+                d="M12.8335 16.5L18.3335 11L12.8335 5.5"
+                stroke="#767676"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M3.6665 11L18.3332 11"
+                stroke="#767676"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+          </div>
+          <div
+            class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-3"
+          >
+            <div class="flex-grow-0 flex-shrink-0 w-[360px] h-14 relative overflow-hidden">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 16.6667L3.71974 10.806C2.09342 9.28753 2.09342 6.82411 3.71974 5.30562C5.34605 3.78712 7.98684 3.78712 9.61316 5.30562L10 5.66594L10.3868 5.30562C12.0132 3.78712 14.6539 3.78712 16.2803 5.30562C17.9066 6.82411 17.9066 9.28753 16.2803 10.806L10 16.6667Z"
+                  fill="#767676"
+                  stroke="#767676"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex justify-start items-center absolute left-8 top-[11px] gap-3">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-[33px] h-[33px]"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                  <circle cx="27" cy="27" r="5.5" fill="#0C8800" stroke="#F1F1F5"></circle>
+                </svg>
+                <div
+                  class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[93px] relative"
+                >
+                  <div
+                    class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1"
+                  >
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      서혁준
+                    </p>
+                    <div class="flex-grow-0 flex-shrink-0 w-[34px] h-3.5">
+                      <div class="w-[34px] h-3.5">
+                        <div class="w-[34px] h-3.5">
+                          <div class="w-[34px] h-3.5">
+                            <div class="w-[34px] h-3.5">
+                              <div class="w-[34px] h-3.5">
+                                <div
+                                  class="w-[34px] h-3.5 absolute left-[39.5px] top-[2.5px] rounded-[5px] bg-[#ebd9e4]"
+                                ></div>
+                                <p
+                                  class="w-[25.73px] h-[6.59px] absolute left-11 top-[7px] text-[7px] font-medium text-center text-[#98183b]"
+                                >
+                                  폴라 AM
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="self-stretch flex-grow-0 flex-shrink-0 w-[93px] text-[11px] font-medium text-left text-[#767676]"
+                  >
+                    iBT 모의고사 응시 중..
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow-0 flex-shrink-0 w-[360px] h-14 relative overflow-hidden">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 16.6667L3.71974 10.806C2.09342 9.28753 2.09342 6.82411 3.71974 5.30562C5.34605 3.78712 7.98684 3.78712 9.61316 5.30562L10 5.66594L10.3868 5.30562C12.0132 3.78712 14.6539 3.78712 16.2803 5.30562C17.9066 6.82411 17.9066 9.28753 16.2803 10.806L10 16.6667Z"
+                  fill="#767676"
+                  stroke="#767676"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex justify-start items-center absolute left-8 top-[11px] gap-3">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-[33px] h-[33px]"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                  <circle cx="27" cy="27" r="5.5" fill="#0C8800" stroke="#F1F1F5"></circle>
+                </svg>
+                <div
+                  class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[93px] relative"
+                >
+                  <div
+                    class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1"
+                  >
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      진민하
+                    </p>
+                    <div class="flex-grow-0 flex-shrink-0 w-[34px] h-3.5">
+                      <div class="w-[34px] h-3.5">
+                        <div class="w-[34px] h-3.5">
+                          <div class="w-[34px] h-3.5">
+                            <div class="w-[34px] h-3.5">
+                              <div class="w-[34px] h-3.5">
+                                <div
+                                  class="w-[34px] h-3.5 absolute left-[39.5px] top-[2.5px] rounded-[5px] bg-[#ebd9e4]"
+                                ></div>
+                                <p
+                                  class="w-[25.73px] h-[6.59px] absolute left-11 top-[7px] text-[7px] font-medium text-center text-[#98183b]"
+                                >
+                                  폴라 AM
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="self-stretch flex-grow-0 flex-shrink-0 w-[93px] text-[11px] font-medium text-left text-[#767676]"
+                  >
+                    숙제 하는 중..
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow-0 flex-shrink-0 w-[360px] h-14 relative overflow-hidden">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 16.6667L3.71974 10.806C2.09342 9.28753 2.09342 6.82411 3.71974 5.30562C5.34605 3.78712 7.98684 3.78712 9.61316 5.30562L10 5.66594L10.3868 5.30562C12.0132 3.78712 14.6539 3.78712 16.2803 5.30562C17.9066 6.82411 17.9066 9.28753 16.2803 10.806L10 16.6667Z"
+                  stroke="#767676"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="32"
+                  height="33"
+                  viewBox="0 0 32 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-8 h-8"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16.5" r="16" fill="#D9D9D9"></circle>
+                </svg>
+                <div class="flex-grow-0 flex-shrink-0 w-[78px] h-[35px]">
+                  <div class="flex flex-col justify-start items-start absolute left-11 top-0">
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      심준보
+                    </p>
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-[11px] font-medium text-left text-[#767676]"
+                    >
+                      학원 정규 수업 중..
+                    </p>
+                  </div>
+                  <div class="w-[34px] h-3.5">
+                    <div class="w-[34px] h-3.5">
+                      <div class="w-[34px] h-3.5">
+                        <div class="w-[34px] h-3.5">
+                          <div class="w-[34px] h-3.5">
+                            <div class="w-[34px] h-3.5">
+                              <div
+                                class="w-[34px] h-3.5 absolute left-[83.5px] top-[2.5px] rounded-[5px] bg-[#ebd9e4]"
+                              ></div>
+                              <p
+                                class="w-[25.73px] h-[6.59px] absolute left-[88px] top-[7px] text-[7px] font-medium text-center text-[#98183b]"
+                              >
+                                유마 AT
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow-0 flex-shrink-0 w-[360px] h-14 relative overflow-hidden">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 16.6667L3.71974 10.806C2.09342 9.28753 2.09342 6.82411 3.71974 5.30562C5.34605 3.78712 7.98684 3.78712 9.61316 5.30562L10 5.66594L10.3868 5.30562C12.0132 3.78712 14.6539 3.78712 16.2803 5.30562C17.9066 6.82411 17.9066 9.28753 16.2803 10.806L10 16.6667Z"
+                  stroke="#767676"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-8 h-8"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                </svg>
+                <div class="flex-grow-0 flex-shrink-0 w-[74px] h-5">
+                  <div class="flex flex-col justify-start items-start absolute left-11 top-1.5">
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      문쇼윤
+                    </p>
+                  </div>
+                  <div class="w-[34px] h-3.5">
+                    <div class="w-[34px] h-3.5">
+                      <div class="w-[34px] h-3.5">
+                        <div class="w-[34px] h-3.5">
+                          <div class="w-[34px] h-3.5">
+                            <div class="w-[34px] h-3.5">
+                              <div
+                                class="w-[34px] h-3.5 absolute left-[83.5px] top-[8.5px] rounded-[5px] bg-[#ebd9e4]"
+                              ></div>
+                              <p
+                                class="w-[25.73px] h-[6.59px] absolute left-[88px] top-[13px] text-[7px] font-medium text-center text-[#98183b]"
+                              >
+                                폴라 AM
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow-0 flex-shrink-0 w-[360px] h-14 relative overflow-hidden">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 16.6667L3.71974 10.806C2.09342 9.28753 2.09342 6.82411 3.71974 5.30562C5.34605 3.78712 7.98684 3.78712 9.61316 5.30562L10 5.66594L10.3868 5.30562C12.0132 3.78712 14.6539 3.78712 16.2803 5.30562C17.9066 6.82411 17.9066 9.28753 16.2803 10.806L10 16.6667Z"
+                  stroke="#767676"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-8 h-8"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                </svg>
+                <div class="flex-grow-0 flex-shrink-0 w-[74px] h-5">
+                  <div class="flex flex-col justify-start items-start absolute left-11 top-1.5">
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      박정우
+                    </p>
+                  </div>
+                  <div class="w-[34px] h-3.5">
+                    <div class="w-[34px] h-3.5">
+                      <div class="w-[34px] h-3.5">
+                        <div class="w-[34px] h-3.5">
+                          <div class="w-[34px] h-3.5">
+                            <div class="w-[34px] h-3.5">
+                              <div
+                                class="w-[34px] h-3.5 absolute left-[83.5px] top-[8.5px] rounded-[5px] bg-[#ebd9e4]"
+                              ></div>
+                              <p
+                                class="w-[25.73px] h-[6.59px] absolute left-[88px] top-[13px] text-[7px] font-medium text-center text-[#98183b]"
+                              >
+                                유마 BM
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow-0 flex-shrink-0 w-[360px] h-14 relative overflow-hidden">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 16.6667L3.71974 10.806C2.09342 9.28753 2.09342 6.82411 3.71974 5.30562C5.34605 3.78712 7.98684 3.78712 9.61316 5.30562L10 5.66594L10.3868 5.30562C12.0132 3.78712 14.6539 3.78712 16.2803 5.30562C17.9066 6.82411 17.9066 9.28753 16.2803 10.806L10 16.6667Z"
+                  stroke="#767676"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-8 h-8"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                </svg>
+                <div class="flex-grow-0 flex-shrink-0 w-[74px] h-5">
+                  <div class="flex flex-col justify-start items-start absolute left-11 top-1.5">
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      박하준
+                    </p>
+                  </div>
+                  <div class="w-[34px] h-3.5">
+                    <div class="w-[34px] h-3.5">
+                      <div class="w-[34px] h-3.5">
+                        <div class="w-[34px] h-3.5">
+                          <div class="w-[34px] h-3.5">
+                            <div class="w-[34px] h-3.5">
+                              <div
+                                class="w-[34px] h-3.5 absolute left-[83.5px] top-[8.5px] rounded-[5px] bg-[#ebd9e4]"
+                              ></div>
+                              <p
+                                class="w-[25.73px] h-[6.59px] absolute left-[88px] top-[13px] text-[7px] font-medium text-center text-[#98183b]"
+                              >
+                                파보 AT
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow-0 flex-shrink-0 w-[360px] h-14 relative overflow-hidden">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 16.6667L3.71974 10.806C2.09342 9.28753 2.09342 6.82411 3.71974 5.30562C5.34605 3.78712 7.98684 3.78712 9.61316 5.30562L10 5.66594L10.3868 5.30562C12.0132 3.78712 14.6539 3.78712 16.2803 5.30562C17.9066 6.82411 17.9066 9.28753 16.2803 10.806L10 16.6667Z"
+                  stroke="#767676"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-8 h-8"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                </svg>
+                <div class="flex-grow-0 flex-shrink-0 w-[74px] h-5">
+                  <div class="flex flex-col justify-start items-start absolute left-11 top-1.5">
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      김지오
+                    </p>
+                  </div>
+                  <div class="w-[34px] h-3.5">
+                    <div class="w-[34px] h-3.5">
+                      <div class="w-[34px] h-3.5">
+                        <div class="w-[34px] h-3.5">
+                          <div class="w-[34px] h-3.5">
+                            <div class="w-[34px] h-3.5">
+                              <div
+                                class="w-[34px] h-3.5 absolute left-[83.5px] top-[8.5px] rounded-[5px] bg-[#ebd9e4]"
+                              ></div>
+                              <p
+                                class="w-[25.73px] h-[6.59px] absolute left-[88px] top-[13px] text-[7px] font-medium text-center text-[#98183b]"
+                              >
+                                파보 BT
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow-0 flex-shrink-0 w-[360px] h-14 relative overflow-hidden">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 16.6667L3.71974 10.806C2.09342 9.28753 2.09342 6.82411 3.71974 5.30562C5.34605 3.78712 7.98684 3.78712 9.61316 5.30562L10 5.66594L10.3868 5.30562C12.0132 3.78712 14.6539 3.78712 16.2803 5.30562C17.9066 6.82411 17.9066 9.28753 16.2803 10.806L10 16.6667Z"
+                  stroke="#767676"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-8 h-8"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                </svg>
+                <div class="flex-grow-0 flex-shrink-0 w-[74px] h-5">
+                  <div class="flex flex-col justify-start items-start absolute left-11 top-1.5">
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      이주아
+                    </p>
+                  </div>
+                  <div class="w-[34px] h-3.5">
+                    <div class="w-[34px] h-3.5">
+                      <div class="w-[34px] h-3.5">
+                        <div class="w-[34px] h-3.5">
+                          <div class="w-[34px] h-3.5">
+                            <div class="w-[34px] h-3.5">
+                              <div
+                                class="w-[34px] h-3.5 absolute left-[83.5px] top-[8.5px] rounded-[5px] bg-[#ebd9e4]"
+                              ></div>
+                              <p
+                                class="w-[25.73px] h-[6.59px] absolute left-[88px] top-[13px] text-[7px] font-medium text-center text-[#98183b]"
+                              >
+                                폴라 AT
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-5"
+        >
+          <div class="self-stretch flex-grow-0 flex-shrink-0 h-7 relative">
+            <p class="absolute left-8 top-0 text-xl font-semibold text-left text-[#505050]">
+              나의 선생님
+            </p>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[22px] h-[22px] absolute left-[306px] top-[3px]"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <path
+                d="M12.8335 16.5L18.3335 11L12.8335 5.5"
+                stroke="#767676"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M3.6665 11L18.3332 11"
+                stroke="#767676"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+          </div>
+          <div
+            class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-3"
+          >
+            <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-[33px] h-[33px]"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                  <circle cx="27" cy="27" r="5.5" fill="#0C8800" stroke="#F1F1F5"></circle>
+                </svg>
+                <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0">
+                  <div
+                    class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative"
+                  >
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      김재진 선생님
+                    </p>
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-[11px] font-medium text-left text-[#767676]"
+                    >
+                      RC / Grammer
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-[33px] h-[33px]"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                  <circle cx="27" cy="27" r="5.5" fill="#0C8800" stroke="#F1F1F5"></circle>
+                </svg>
+                <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0">
+                  <div
+                    class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative"
+                  >
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      신민경 선생님
+                    </p>
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-[11px] font-medium text-left text-[#767676]"
+                    >
+                      News
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="self-stretch flex-grow-0 flex-shrink-0 h-14 relative overflow-hidden">
+              <div class="flex justify-start items-center absolute left-8 top-2.5 gap-3">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-[33px] h-[33px]"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#D9D9D9"></circle>
+                  <circle cx="27" cy="27" r="5.5" fill="#0C8800" stroke="#F1F1F5"></circle>
+                </svg>
+                <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0">
+                  <div
+                    class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative"
+                  >
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-sm font-semibold text-left text-[#505050]"
+                    >
+                      정시온 선생님
+                    </p>
+                    <p
+                      class="flex-grow-0 flex-shrink-0 text-[11px] font-medium text-left text-[#767676]"
+                    >
+                      Debate
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="absolute left-[295px] top-[381px] text-xl font-semibold text-left text-[#505050]">
+        성적 추이
+      </p>
+      <div
+        class="flex flex-col justify-start items-start absolute left-[292px] top-[421px] gap-6 p-6 rounded-2xl bg-white"
+      >
+        <div
+          class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 h-[63px] relative gap-0.5"
+        >
+          <p
+            class="self-stretch flex-grow-0 flex-shrink-0 w-[322px] text-2xl font-semibold text-left text-[#111]"
+          >
+            iBT 모의고사
+          </p>
+          <div
+            class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-1.5"
+          >
+            <svg
+              width="9"
+              height="12"
+              viewBox="0 0 9 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-[9px] h-3"
+              preserveAspectRatio="none"
+            >
+              <path d="M4.5 0L8.39711 5.25H0.602886L4.5 0Z" fill="#0C8800"></path>
+              <rect x="3" y="4" width="3" height="8" fill="#0C8800"></rect>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left">
+              <span class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#767676]"
+                >지난 점수 대비 </span
+              ><span
+                class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#0c8800]"
+                >5%</span
+              ><span
+                class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#767676]"
+              >
+                올랐습니다</span
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 h-[166px] w-[322px] bg-white"
+        >
+          <div class="flex justify-start items-center self-stretch flex-grow gap-2 bg-white">
+            <div
+              class="flex flex-col justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative"
+            >
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-[21px] h-[15.17px] text-xs text-left text-black"
+              >
+                100
+              </p>
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-[21px] h-[15.17px] text-xs text-left text-black"
+              >
+                66
+              </p>
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-[21px] h-[15.17px] text-xs text-left text-black"
+              >
+                33
+              </p>
+              <p
+                class="self-stretch flex-grow-0 flex-shrink-0 w-[21px] h-[15.17px] text-xs text-left text-black"
+              >
+                0
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-start items-start self-stretch flex-grow relative bg-white"
+            >
+              <svg
+                width="293"
+                height="102"
+                viewBox="0 0 293 102"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="self-stretch flex-grow"
+                preserveAspectRatio="none"
+              >
+                <rect x="2.51953" y="0.5" width="289.978" height="101" stroke="#F1F1F1"></rect>
+                <path d="M2.01953 34H292.998" stroke="#F1F1F1"></path>
+                <path d="M2.01953 68H292.998" stroke="#F1F1F1"></path>
+                <path d="M50.5156 0L50.5156 100.938" stroke="#F1F1F1"></path>
+                <path d="M99.0098 0L99.0098 100.938" stroke="#F1F1F1"></path>
+                <path d="M147.51 0L147.51 100.938" stroke="#F1F1F1"></path>
+                <path d="M196.008 0L196.008 100.938" stroke="#F1F1F1"></path>
+                <path d="M244.502 0L244.502 100.938" stroke="#F1F1F1"></path>
+                <ellipse
+                  cx="196.009"
+                  cy="43.631"
+                  rx="2.02032"
+                  ry="2.12805"
+                  fill="#E697FF"
+                ></ellipse>
+                <path
+                  d="M2.02148 64.9115C25.5662 59.5629 90.6351 48.1665 162.553 45.3688C234.472 42.5712 278.136 36.6604 290.979 34.0547"
+                  stroke="#E697FF"
+                ></path>
+                <ellipse
+                  cx="3.03204"
+                  cy="65.9758"
+                  rx="2.02032"
+                  ry="2.12805"
+                  fill="#E697FF"
+                ></ellipse>
+                <ellipse
+                  cx="50.5164"
+                  cy="56.3995"
+                  rx="2.02032"
+                  ry="2.12805"
+                  fill="#E697FF"
+                ></ellipse>
+                <ellipse
+                  cx="146.501"
+                  cy="46.8235"
+                  rx="2.02032"
+                  ry="2.12805"
+                  fill="#E697FF"
+                ></ellipse>
+                <ellipse
+                  cx="290.98"
+                  cy="35.1193"
+                  rx="2.02032"
+                  ry="2.12805"
+                  fill="#E697FF"
+                ></ellipse>
+                <path
+                  d="M4.04297 35.7962C24.2584 39.6618 71.1977 45.9755 97.2313 40.306C129.773 33.2192 171.19 17.9716 185.489 12.388C199.788 6.80443 216.059 -0.926707 243.177 9.16672C270.295 19.2602 282.622 29.1388 291.99 29.9978"
+                  stroke="#7987FF"
+                ></path>
+                <path
+                  d="M2.02051 34.5547C2.83588 34.5548 3.54095 35.2588 3.54102 36.1826C3.54102 37.1065 2.83592 37.8104 2.02051 37.8105C1.20502 37.8105 0.5 37.1066 0.5 36.1826C0.500063 35.2587 1.20505 34.5547 2.02051 34.5547Z"
+                  fill="#7987FF"
+                  stroke="#7987FF"
+                ></path>
+                <path
+                  d="M50.5166 40.9396C51.332 40.9397 52.037 41.6437 52.0371 42.5675C52.0371 43.4914 51.332 44.1953 50.5166 44.1954C49.7011 44.1954 48.9961 43.4914 48.9961 42.5675C48.9962 41.6436 49.7011 40.9396 50.5166 40.9396Z"
+                  fill="#7987FF"
+                  stroke="#7987FF"
+                ></path>
+                <ellipse
+                  cx="99.0125"
+                  cy="50.0157"
+                  rx="2.02032"
+                  ry="2.12805"
+                  fill="#E697FF"
+                ></ellipse>
+                <path
+                  d="M99.0127 37.7471C99.8281 37.7472 100.533 38.4512 100.533 39.375C100.533 40.2989 99.8281 41.0028 99.0127 41.0029C98.1972 41.0029 97.4922 40.2989 97.4922 39.375C97.4923 38.4511 98.1972 37.7471 99.0127 37.7471Z"
+                  fill="#7987FF"
+                  stroke="#7987FF"
+                ></path>
+                <path
+                  d="M147.511 24.9785C148.326 24.9786 149.031 25.6826 149.031 26.6064C149.031 27.5303 148.326 28.2343 147.511 28.2344C146.695 28.2344 145.99 27.5304 145.99 26.6064C145.99 25.6826 146.695 24.9785 147.511 24.9785Z"
+                  fill="#7987FF"
+                  stroke="#7987FF"
+                ></path>
+                <path
+                  d="M196.009 6.88965C196.824 6.88976 197.529 7.59377 197.53 8.51758C197.53 9.44145 196.824 10.1454 196.009 10.1455C195.194 10.1455 194.489 9.44152 194.489 8.51758C194.489 7.5937 195.194 6.88965 196.009 6.88965Z"
+                  fill="#7987FF"
+                  stroke="#7987FF"
+                ></path>
+                <path
+                  d="M290.98 28.1709C291.795 28.171 292.5 28.875 292.5 29.7988C292.5 30.7227 291.795 31.4266 290.98 31.4268C290.164 31.4268 289.459 30.7228 289.459 29.7988C289.46 28.8749 290.165 28.1709 290.98 28.1709Z"
+                  fill="#7987FF"
+                  stroke="#7987FF"
+                ></path>
+                <ellipse
+                  cx="244.503"
+                  cy="39.3751"
+                  rx="2.02032"
+                  ry="2.12805"
+                  fill="#E697FF"
+                ></ellipse>
+                <path
+                  d="M244.503 7.95508C245.319 7.95519 246.024 8.6592 246.024 9.58301C246.024 10.5069 245.319 11.2108 244.503 11.2109C243.688 11.2109 242.983 10.507 242.983 9.58301C242.983 8.65913 243.688 7.95508 244.503 7.95508Z"
+                  fill="#7987FF"
+                  stroke="#7987FF"
+                ></path>
+              </svg>
+              <div class="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
+                <div class="flex justify-center items-center flex-grow relative gap-2.5">
+                  <p class="flex-grow w-[48.83px] text-[10px] text-center text-black">4월 3회</p>
+                </div>
+                <div class="flex justify-center items-center flex-grow relative gap-2.5">
+                  <p class="flex-grow w-[48.83px] text-[10px] text-center text-black">4월 4회</p>
+                </div>
+                <div class="flex justify-center items-center flex-grow relative gap-2.5">
+                  <p class="flex-grow w-[48.83px] text-[10px] text-center text-black">5월 1회</p>
+                </div>
+                <div class="flex justify-center items-center flex-grow relative gap-2.5">
+                  <p class="flex-grow w-[48.83px] text-[10px] text-center text-black">5월 2회</p>
+                </div>
+                <div class="flex justify-center items-center flex-grow relative gap-2.5">
+                  <p class="flex-grow w-[48.83px] text-[10px] text-center text-black">5월 3회</p>
+                </div>
+                <div class="flex justify-center items-center flex-grow relative gap-2.5">
+                  <p class="flex-grow w-[48.83px] text-[10px] text-center text-black">5월 4회</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 h-[52px] gap-2.5"
+          >
+            <div class="flex justify-start items-end self-stretch flex-grow gap-2 pr-2.5 pt-6 pb-2">
+              <div
+                class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative overflow-hidden gap-0.5 py-px bg-transparent"
+              >
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-4 h-4 relative"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="8" cy="8.5" r="4" fill="#7987FF"></circle>
+                </svg>
+                <div
+                  class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                >
+                  <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-black">
+                    내 점수
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative overflow-hidden gap-0.5 py-px bg-transparent"
+              >
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="flex-grow-0 flex-shrink-0 w-4 h-4 relative"
+                  preserveAspectRatio="none"
+                >
+                  <circle cx="8" cy="8.5" r="4" fill="#E697FF"></circle>
+                </svg>
+                <div
+                  class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-2.5"
+                >
+                  <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-black">
+                    평균 점수
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-start items-center absolute left-[300px] top-28 gap-4">
+        <p class="flex-grow-0 flex-shrink-0 text-xl font-semibold text-left text-[#505050]">
+          미완료 과제
+        </p>
+      </div>
+      <div class="flex justify-start items-center absolute left-[292px] top-[152px] gap-3">
+        <div
+          class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[300px] relative gap-2 p-6 rounded-2xl bg-white"
+        >
+          <p
+            class="self-stretch flex-grow-0 flex-shrink-0 w-[252px] h-[22px] text-base font-medium text-left text-[#767676]"
+          >
+            Grammar
+          </p>
+          <div
+            class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 h-[63px] relative gap-0.5"
+          >
+            <p
+              class="self-stretch flex-grow-0 flex-shrink-0 w-[252px] text-xl font-semibold text-left text-[#111]"
+            >
+              진도복습 숙제
+            </p>
+            <div
+              class="flex justify-start items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-1.5"
+            >
+              <p class="flex-grow-0 flex-shrink-0 text-base font-medium text-left text-[#767676]">
+                4형식 문제 끝까지 풀기
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex justify-end items-center self-stretch flex-grow-0 flex-shrink-0 relative gap-1.5"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-grow-0 flex-shrink-0 w-5 h-5 relative"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g clip-path="url(#clip0_294_389)">
+                <path
+                  d="M9.99175 1.66663C5.39175 1.66663 1.66675 5.39996 1.66675 9.99996C1.66675 14.6 5.39175 18.3333 9.99175 18.3333C14.6001 18.3333 18.3334 14.6 18.3334 9.99996C18.3334 5.39996 14.6001 1.66663 9.99175 1.66663ZM10.0001 16.6666C6.31675 16.6666 3.33341 13.6833 3.33341 9.99996C3.33341 6.31663 6.31675 3.33329 10.0001 3.33329C13.6834 3.33329 16.6667 6.31663 16.6667 9.99996C16.6667 13.6833 13.6834 16.6666 10.0001 16.6666ZM9.81675 5.83329H9.76675C9.43341 5.83329 9.16675 6.09996 9.16675 6.43329V10.3666C9.16675 10.6583 9.31675 10.9333 9.57508 11.0833L13.0334 13.1583C13.3167 13.325 13.6834 13.2416 13.8501 12.9583C14.0251 12.675 13.9334 12.3 13.6417 12.1333L10.4167 10.2166V6.43329C10.4167 6.09996 10.1501 5.83329 9.81675 5.83329Z"
+                  fill="#98183B"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_294_389">
+                  <rect width="20" height="20" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="flex-grow-0 flex-shrink-0 text-xs font-medium text-right">
+              <span class="flex-grow-0 flex-shrink-0 text-xs font-medium text-right text-[#960139]"
+                >오늘 수업까지</span
+              ><span
+                class="flex-grow-0 flex-shrink-0 text-xs font-medium text-right text-[#767676]"
+              >
+                완료해야 합니다</span
+              >
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

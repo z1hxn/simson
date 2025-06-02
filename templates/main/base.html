@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>심슨어학원</title>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background: #F7F7FB;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      border-bottom: 1px solid #E5E5EC;
+      padding: 0 100px;
+      background: #F7F7FB;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 40px;
+      color: #505050;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none; /* 밑줄 제거 */
+      color: inherit;       /* 글자색 유지 */
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .login-button {
+      background: #98183B;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none; /* 밑줄 제거 */
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-button:hover {
+      background-color: #7a1331; /* 호버 시 색상 변경 */
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="{% url 'main' %}" class="logo">
+      <img src="{% static 'logo.png' %}" alt="심슨어학원 로고" />
+      <div>
+        <div style="font-size: 12px; color: #767676;">초/중/고 영어전문</div>
+        <div style="font-weight: 600;">심슨어학원</div>
+      </div>
+    </a>
+    <nav class="nav-menu">
+      <div>학원소개</div>
+      <div>프로그램</div>
+      <div>입학안내</div>
+      <div>온라인예약</div>
+      <div>학사일정</div>
+      <div>학습자료실</div>
+    </nav>
+    <a href="{% url 'login' %}" class="login-button">로그인</a>
+  </header>
+  <main style="display: flex; flex-direction: column; align-items: center; margin-top: 120px; gap: 40px;">
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>
