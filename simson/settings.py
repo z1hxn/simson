@@ -26,9 +26,6 @@ import os
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-%%xy(gfovk$*0m%#i61mbk=l84sku3j2yd8t443gbh^nx(sm)d')
 
-# SECURITY WARNING: don't run with ㄴㅅㄴ turned on in production!
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
