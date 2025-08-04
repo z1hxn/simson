@@ -27,7 +27,7 @@ import os
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-%%xy(gfovk$*0m%#i61mbk=l84sku3j2yd8t443gbh^nx(sm)d')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['esimson.kro.kr', 'simson.onrender.com', 'localhost', '127.0.0.1']
 

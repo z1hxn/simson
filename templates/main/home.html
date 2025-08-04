@@ -3,5 +3,743 @@
 {% block title %}메인 | 심슨어학원{% endblock %}
 
 {% block content %}
-    <h3> Simson Main Page Test</h>
+<!-- 메인 슬라이더 -->
+<section class="main-slider">
+  <div class="slider-container">
+    {% for slider in sliders %}
+    <div class="slide {% if forloop.first %}active{% endif %}">
+      <div class="slide-image">
+        {% if slider.image %}
+          <img src="{{ slider.image.url }}" alt="{{ slider.title }}">
+        {% else %}
+          <div class="image-placeholder"></div>
+        {% endif %}
+      </div>
+      <div class="slide-content">
+        <h2 class="slide-title">{{ slider.title }}</h2>
+        {% if slider.subtitle %}
+          <p class="slide-subtitle">{{ slider.subtitle }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+    <div class="slider-controls">
+      <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+      <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+    </div>
+    <div class="slider-dots">
+      {% for slider in sliders %}
+        <span class="dot {% if forloop.first %}active{% endif %}" onclick="currentSlide({{ forloop.counter }})"></span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 교육신념 섹션 -->
+<section class="philosophy-section">
+  <div class="container">
+    <div class="philosophy-grid">
+      {% for philosophy in philosophies %}
+      <div class="philosophy-item">
+        <div class="philosophy-icon">{{ philosophy.icon }}</div>
+        <h3>{{ philosophy.title }}</h3>
+        <p>{{ philosophy.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 성과 현황 섹션 -->
+<section class="achievements-section">
+  <div class="container">
+    {% if achievements %}
+    <h2 class="section-title">{{ achievements.0.year }}년 심슨의 놀라운 성과</h2>
+    {% endif %}
+    
+    {% for achievement in achievements %}
+      {% if achievement.is_highlight %}
+      <div class="achievement-highlight">
+        <h3>{{ achievement.title }}</h3>
+        {% if achievement.description %}
+          <p class="highlight-student">{{ achievement.description }}</p>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+    
+    {% if university_results %}
+    <div class="university-results">
+      <h3>대학 합격 현황</h3>
+      <div class="results-grid">
+        {% for result in university_results %}
+        <div class="result-item">
+          <span class="university">{{ result.university }} {{ result.department }}</span>
+          <span class="student">{{ result.student_name }}({{ result.high_school }}{% if result.branch %}/{{ result.branch }}{% endif %})</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- 프로그램 소개 섹션 -->
+<section class="programs-section">
+  <div class="container">
+    <h2 class="section-title">심슨 프로그램</h2>
+    {% if programs %}
+    <div class="program-tabs">
+      {% for program in programs %}
+        {% if forloop.first %}
+          <button class="tab-btn active" onclick="openTab('{{ program.program_type }}')">{{ program.get_program_type_display }}</button>
+        {% else %}
+          <button class="tab-btn" onclick="openTab('{{ program.program_type }}')">{{ program.get_program_type_display }}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+    {% for program in programs %}
+      {% if forloop.first %}
+        <div id="{{ program.program_type }}" class="tab-content active">
+      {% else %}
+        <div id="{{ program.program_type }}" class="tab-content">
+      {% endif %}
+        <div class="program-content">
+          <h3>{{ program.title }}</h3>
+          {% if program.image1 or program.image2 %}
+          <div class="program-images">
+            {% if program.image1 %}
+              <img src="{{ program.image1.url }}" alt="{{ program.title }}">
+            {% else %}
+              <div class="image-placeholder"></div>
+            {% endif %}
+            {% if program.image2 %}
+              <img src="{{ program.image2.url }}" alt="{{ program.title }}">
+            {% else %}
+              <div class="image-placeholder"></div>
+            {% endif %}
+          </div>
+          {% endif %}
+          <p>{{ program.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+<!-- 학원 활동 섹션 -->
+<section class="activities-section">
+  <div class="container">
+    {% if activities %}
+    <div class="activities-grid">
+      {% regroup activities by activity_type as activity_list %}
+      {% for activity_type in activity_list %}
+      <div class="activity-card">
+        <h3>{{ activity_type.grouper|title }}</h3>
+        <div class="activity-items">
+          {% for activity in activity_type.list %}
+          <div class="activity-item">
+            <div class="activity-image">
+              {% if activity.image %}
+                <img src="{{ activity.image.url }}" alt="{{ activity.title }}">
+              {% else %}
+                <div class="image-placeholder small"></div>
+              {% endif %}
+            </div>
+            <div class="activity-info">
+              <p class="activity-title">{{ activity.title }}</p>
+              {% if activity.description %}
+                <p class="activity-desc">{{ activity.description }}</p>
+              {% endif %}
+              {% if activity.sub_description %}
+                <p class="activity-sub">{{ activity.sub_description }}</p>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <a href="#" class="more-link">+ MORE</a>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- 특목고 합격자 섹션 -->
+<section class="special-school-section">
+  <div class="container">
+    {% if special_school_results %}
+    <h2 class="section-title">SIMSTERS! - {{ special_school_results.0.year }}년 특목고 합격자</h2>
+    <div class="special-school-results">
+      {% for result in special_school_results %}
+      <div class="result-item">
+        <span class="school">{{ result.school }} {{ result.department }}</span>
+        <span class="student">{{ result.student_name }}</span>
+        <span class="middle-school">{{ result.middle_school }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+/* 전체 스타일 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #111;
+}
+
+/* 메인 슬라이더 */
+.main-slider {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #98183B 0%, #7a1331 100%);
+  color: white;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.slide-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.slide-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.slider-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 3;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* 교육신념 섹션 */
+.philosophy-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.philosophy-item {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.philosophy-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.philosophy-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.philosophy-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.philosophy-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 성과 현황 섹션 */
+.achievements-section {
+  padding: 4rem 0;
+  background: #f7f7fb;
+}
+
+.achievement-highlight {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-highlight h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #98183B;
+  margin-bottom: 1rem;
+}
+
+.highlight-student {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #111;
+}
+
+.university-results h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.university {
+  font-weight: 600;
+  color: #111;
+}
+
+.student {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 프로그램 섹션 */
+.programs-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.program-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.tab-btn {
+  padding: 1rem 2rem;
+  border: 2px solid #98183B;
+  background: transparent;
+  color: #98183B;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #98183B;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.program-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.program-images {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.program-images .image-placeholder {
+  width: 200px;
+  height: 150px;
+  background: #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* 학원 활동 섹션 */
+.activities-section {
+  padding: 4rem 0;
+  background: #f7f7fb;
+}
+
+.activities-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #111;
+  border-bottom: 2px solid #98183B;
+  padding-bottom: 0.5rem;
+}
+
+.activity-items {
+  margin-bottom: 1rem;
+}
+
+.activity-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.activity-image {
+  flex-shrink: 0;
+}
+
+.image-placeholder.small {
+  width: 60px;
+  height: 60px;
+  background: #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-title {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.25rem;
+}
+
+.activity-desc {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.activity-sub {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.more-link {
+  color: #98183B;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.more-link:hover {
+  text-decoration: underline;
+}
+
+/* 특목고 합격자 섹션 */
+.special-school-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.special-school-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.special-school-results .result-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.school {
+  font-weight: 600;
+  color: #111;
+}
+
+.student {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.middle-school {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .slide-title {
+    font-size: 2rem;
+  }
+  
+  .slide-subtitle {
+    font-size: 1rem;
+  }
+  
+  .slider-controls {
+    padding: 0 1rem;
+  }
+  
+  .slider-btn {
+    padding: 0.75rem;
+    font-size: 1.25rem;
+  }
+  
+  .program-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .special-school-results .result-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .main-slider {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  .activities-grid {
+    flex-direction: column;
+  }
+  
+  .activity-card {
+    flex: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-title {
+    font-size: 1.5rem;
+  }
+  
+  .slide-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .main-slider {
+    height: 40vh;
+    min-height: 250px;
+  }
+  
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+}
+
+function changeSlide(direction) {
+  currentSlideIndex += direction;
+  
+  if (currentSlideIndex >= slides.length) {
+    currentSlideIndex = 0;
+  } else if (currentSlideIndex < 0) {
+    currentSlideIndex = slides.length - 1;
+  }
+  
+  showSlide(currentSlideIndex);
+}
+
+function currentSlide(index) {
+  currentSlideIndex = index - 1;
+  showSlide(currentSlideIndex);
+}
+
+// 자동 슬라이드
+setInterval(() => {
+  changeSlide(1);
+}, 5000);
+
+// 탭 기능
+function openTab(tabName) {
+  const tabContents = document.querySelectorAll('.tab-content');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  
+  tabContents.forEach(content => content.classList.remove('active'));
+  tabBtns.forEach(btn => btn.classList.remove('active'));
+  
+  document.getElementById(tabName).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
 {% endblock %}

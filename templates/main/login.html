@@ -48,13 +48,15 @@
 {% block content %}
  <main style="display: flex; flex-direction: column; align-items: center; margin-top: 40px; gap: 24px;">
     <h1 style="font-size: 40px; font-weight: 600; color: #333;">로그인</h1>
-    <form method="post" action="{% url 'login' %}" style="display: flex; flex-direction: column; gap: 20px; width: 300px;">
+    <form method="post" action="{% url 'login' %}"
+          style="display: flex; flex-direction: column; gap: 20px; width: 300px;">
       {% csrf_token %}
-      <input type="text" name="username" placeholder="아이디를 입력해 주세요" 
+      </div>
+      <input type="text" name="username" placeholder="아이디를 입력해 주세요"
              style="padding: 14px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;" required />
-      <input type="password" name="password" placeholder="비밀번호를 입력해 주세요" 
+      <input type="password" name="password" placeholder="비밀번호를 입력해 주세요"
              style="padding: 14px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;" required />
-      <button type="submit" 
+      <button type="submit"
               style="padding: 14px; border: none; border-radius: 8px; background-color: #98183B; color: white; font-size: 16px; font-weight: 500; cursor: pointer;">
         로그인
       </button>
